@@ -29,7 +29,7 @@ class ReviewScraper:
   
 
 if __name__ == "__main__":
-  URL = "https://1001albumsgenerator.com/albums/5yj769ALl6uKp6ZIJO0BQM/d-o-a-the-third-and-final-report"
+  URL = "https://1001albumsgenerator.com/albums/0ETFjACtuP2ADo6LFhL6HN/abbey-road"
   scraper = ReviewScraper(URL)
   reviews_df = scraper.get_reviews()
   print(reviews_df)
