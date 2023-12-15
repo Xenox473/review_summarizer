@@ -1,0 +1,14 @@
+beautifulsoup4==4.12.0
+en-core-web-lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.2.0/en_core_web_lg-3.2.0-py3-none-any.whl#sha256=ae37a39df924099ea9e9d9d4d2912bbed9c534089c9f5f3ac0a3564ca7815521
+en-core-web-md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.2.0/en_core_web_md-3.2.0-py3-none-any.whl#sha256=9728ab892904819567e70720a3887b59ded8721f14cc27b3d13273ad2b8ba458
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl#sha256=0964370218b7e1672a30ac50d72cdc6b16f7c867496f1d60925691188f4d2510
+huggingface-hub==0.19.4
+networkx==3.0
+nltk==3.8.1
+pandas==1.5.1
+selenium==4.15.2
+spacy==3.7.2
+spacy-legacy==3.0.12
+spacy-loggers==1.0.4
+transformers==4.30.2
+webdriver-manager==4.0.1
