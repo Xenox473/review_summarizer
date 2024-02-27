@@ -23,13 +23,13 @@ class ReviewScraper:
         reviews_df = pd.concat([reviews_df, pd.DataFrame([[review.text, score.text]], columns=["review", "score"])])
 
     reviews_df.reset_index(drop=True, inplace=True)
-    reviews_df.to_csv("../data/" + self.url.split("/")[-1] + "_reviews.csv", index=False)
+    reviews_df.to_csv("./data/" + self.url.split("/")[-1] + "_reviews.csv", index=False)
 
     return reviews_df
   
 
 if __name__ == "__main__":
-  URL = "https://1001albumsgenerator.com/albums/0ETFjACtuP2ADo6LFhL6HN/abbey-road"
+  URL = "https://1001albumsgenerator.com/albums/1lPoRKSgZHQAYXxzBsOQ7v/bringing-it-all-back-home"
   scraper = ReviewScraper(URL)
   reviews_df = scraper.get_reviews()
   print(reviews_df)

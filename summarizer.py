@@ -10,7 +10,7 @@ from transformers import pipeline
 class Summarizer:
   def __init__(self, album_name):
     self.album_name = album_name
-    self.reviews_df = pd.read_csv("../data/" + album_name + "_reviews.csv")
+    self.reviews_df = pd.read_csv("./data/" + album_name + "_reviews.csv")
     self.nlp = spacy.load('en_core_web_lg')
 
   def token_filter(self, token):
@@ -38,7 +38,7 @@ class Summarizer:
     self.reviews_df = self.reviews_df[self.reviews_df['vector'].map(np.any)]
     # Save processed reviews
     print("Saving processed reviews")
-    self.reviews_df.to_csv("../data/" + self.album_name + "_processed_reviews.csv", index=False)
+    self.reviews_df.to_csv("./data/" + self.album_name + "_processed_reviews.csv", index=False)
     return self.reviews_df
   
   def cluster(self):
@@ -173,7 +173,7 @@ class Summarizer:
     return summary
 
 if __name__ == "__main__":
-  album_name = "abbey_road"
+  album_name = "bringing-it-all-back-home"
   summarizer = Summarizer(album_name)
   summarizer.preprocess()
   summarizer.cluster()
