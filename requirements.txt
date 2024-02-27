@@ -10,3 +10,4 @@ spacy-legacy==3.0.12
 spacy-loggers==1.0.4
 transformers==4.30.2
 webdriver-manager==4.0.1
+sklearn
