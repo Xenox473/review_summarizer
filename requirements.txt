@@ -4,7 +4,7 @@ huggingface-hub==0.19.4
 networkx==3.0
 nltk==3.8.1
 pandas==1.5.1
-selenium==4.15.2
+seleniumbase
 spacy==3.2.0
 spacy-legacy==3.0.12
 spacy-loggers==1.0.4
