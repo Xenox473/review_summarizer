@@ -2,18 +2,27 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from selenium import webdriver
 import time
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
 class ReviewScraper:
   def __init__(self, url):
     self.url = url
-    self.driver = webdriver.Chrome()
+    self.driver = self.get_driver()
     self.driver.get(url)
     load_more_button = self.driver.find_element("id", "load-more-reviews--button")
-    self.driver.execute_script("arguments[0].click();", load_more_button);
+    self.driver.execute_script("arguments[0].click();", load_more_button)
 
     time.sleep(2)
     self.soup = BeautifulSoup(self.driver.page_source, 'html.parser')
     self.driver.quit()
+
+  def get_driver(self):
+    options = Options()
+    options.add_argument('--disable-gpu')
+    options.add_argument('--headless')
+    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
   def get_reviews(self):
     album_reviews = self.soup.find(id="album-reviews")
