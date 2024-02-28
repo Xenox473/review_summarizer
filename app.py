@@ -12,10 +12,6 @@ def submit():
 
 st.text_input(label="Paste url for album", key='widget', on_change=submit)
 
-with st.container as input_cont:
-  st.write("Or select from one of these albums:")
-  
-
 if "url" in st.session_state:
   url = st.session_state.url
   st.session_state.url = ""
