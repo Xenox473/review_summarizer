@@ -11,3 +11,5 @@ The file can be run using the following command: `python review_scraper.py`. A u
 
 ### Step 2: Run `summarizer.py`
 Once the data is scraped and stored in a `data` folder, you can run the summarizer file to generate a summary of the reviews. The album name will need to be set in the summarizer.py file.
+
+The project report can be found [here](NLP_Report.pdf)
