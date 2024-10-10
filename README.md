@@ -9,5 +9,5 @@ This repo contains two files: `review_scraper.py` and `summarizer.py`.
 
 The file can be run using the following command: `python review_scraper.py`. A url for the album you'd like summarized needs to be set as the url variable in the file. The album can be any one of the albums available on the [1001 album generator](https://1001albumsgenerator.com/) website.
 
-### Step 2: Run 'summarizer.py`
+### Step 2: Run `summarizer.py`
 Once the data is scraped and stored in a `data` folder, you can run the summarizer file to generate a summary of the reviews. The album name will need to be set in the summarizer.py file.
